@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.license      = package["license"]
   s.authors      = package["author"]
 
-  s.platforms    = { :ios => min_ios_version_supported }
+  s.platforms    = { :ios => min_ios_version_supported, :osx => "10.15" }
   s.source       = { :git => "{{ self.config.project.repository() }}", :tag => "#{s.version}" }
 
   {#

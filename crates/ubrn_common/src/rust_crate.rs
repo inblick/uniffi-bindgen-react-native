@@ -133,7 +133,7 @@ fn so_extension_from_target<'a>(target: &str, use_shared_library: Option<bool>) 
     if target.contains("windows") {
         "dll"
     } else if target.contains("darwin") {
-        "dylib"
+        "a"
     } else if target.contains("ios") {
         "a"
     } else if target.contains("android")
@@ -153,7 +153,7 @@ fn so_extension_from_cfg<'a>() -> &'a str {
     if cfg!(target_os = "windows") {
         "dll"
     } else if cfg!(target_os = "macos") {
-        "dylib"
+        "a"
     } else if cfg!(target_os = "linux") {
         "so"
     } else {
